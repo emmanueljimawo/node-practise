@@ -1,4 +1,11 @@
 "use strict";
-const greeting = 'Hello Jimawo';
-const numbers = [2, 3];
-const begin = ['emma', 2];
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const app = express_1.default();
+app.get('/', (request, response, next) => {
+    response.send('Hello World');
+});
+app.listen(5000, () => console.log('Server running'));
